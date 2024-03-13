@@ -1,0 +1,33 @@
+const mongoose = require('mongoose');
+
+const questionSchema = new mongoose.Schema({
+    title: {
+        type: String,
+        required: true,
+        trim: true,
+        maxLength: 50
+    },
+    question:
+    {
+        type:String,
+        required: true
+    },
+    answer: {
+        type:String,
+        required: true,
+        maxLength: 30,
+        trim: true
+    },
+    difficulty: {
+        type:String,
+        required: true,
+    },
+    date: {
+        type: Date,
+        required: true,
+        maxLength: 20,
+        trim: true
+    },
+}, {timestamps: true})
+
+module.exports=mongoose.model('question', questionSchema)

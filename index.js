@@ -14,11 +14,8 @@ app.get('/',(req,res)=>{
 })
 
 app.use('/api/auth', require('./routes/auth')),
-app.use('/api/stocks', require('./routes/stock'))
-app.use('/api/transaction', require('./routes/transaction'))
 app.use("/api/chat", require("./routes/chatRoutes"))
 app.use("/api/message", require("./routes/messageRoutes"));
-app.use("/api/request", require("./routes/request"));
 
 const server =app.listen(port,()=>{
     console.log(`Trendy Tone the application is started succesfully on ${port}`);
