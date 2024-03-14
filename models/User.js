@@ -13,17 +13,14 @@ const UserSchema = new Schema({
   },
   noofques: {
     type: Number,
-    required: true,
     unique: true,
   },
   questions: {
     type: Array,
-    required: true,
     unique: true,
   },
   contributions: {
     type: Number,
-    required: true,
     unique: true,
   },
   password: {
